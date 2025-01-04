@@ -15,7 +15,7 @@ body {
   
   /* Header */
   header {
-    background-color: #fff;
+    background-color: #0e0d44;
     border-bottom: 1px solid #ccc;
   }
   
@@ -27,7 +27,7 @@ body {
   
   header h1 a {
     text-decoration: none;
-    color: #333;
+    color: #d8c6c6;
     font-size: 24px;
   }
   
@@ -42,7 +42,7 @@ body {
   
   nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #e2dada;
   }
   
   nav ul li a.active,
@@ -60,7 +60,7 @@ body {
   /* Hero Section */
   .hero {
     background: url('img/Non-woven.png') center/cover no-repeat;
-    color: #fff;
+    color: #b9d8b8;
     text-align: center;
     padding: 100px 0;
   }
