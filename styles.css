@@ -1,0 +1,388 @@
+/* General Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header h1 a {
+    text-decoration: none;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav ul li a.active,
+  nav ul li a:hover {
+    color: #008cba;
+  }
+  
+  /* Menu Icon for Mobile */
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('images/hero-image.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+  }
+  
+  .hero p {
+    font-size: 24px;
+  }
+  
+  .hero .btn {
+    margin-top: 20px;
+  }
+  
+  /* Button Styles */
+  .btn {
+    display: inline-block;
+    background-color: #008cba;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #005f5f;
+  }
+  
+  /* Services Section */
+  .services {
+    padding: 60px 0;
+  }
+  
+  .service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .service-item {
+    flex: 1;
+    min-width: 250px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .service-item img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .service-item h3 {
+    margin-top: 15px;
+  }
+  
+  .service-item p {
+    margin-top: 10px;
+  }
+  
+  /* Call to Action Section */
+  .call-to-action {
+    background-color: #008cba;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .call-to-action h2 {
+    font-size: 36px;
+  }
+  
+  .call-to-action p {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  
+  /* Page Banner */
+  .page-banner {
+    background-color: #f4f4f4;
+    padding: 70px 0;
+    text-align: center;
+  }
+  
+  .page-banner h1 {
+    font-size: 36px;
+  }
+  
+  /* About Section */
+  .about-section {
+    padding: 60px 0;
+  }
+  
+  .about-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    margin-bottom: 20px;
+  }
+  
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .team-member {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .team-member h3 {
+    margin-top: 15px;
+  }
+  
+  .team-member p {
+    margin-top: 5px;
+  }
+  
+  /* Products Section */
+  .products-section {
+    padding: 60px 0;
+  }
+  
+  .product-item {
+    margin-bottom: 60px;
+  }
+  
+  .product-item img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .product-item h2 {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  
+  .product-item p {
+    margin-top: 10px;
+  }
+  
+  .product-item ul {
+    list-style: disc inside;
+    margin-top: 10px;
+  }
+  
+  .product-item ul li {
+    margin-bottom: 5px;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .contact-item {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+  }
+  
+  .contact-item h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form label span {
+    color: red;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .contact-form button {
+    display: inline-block;
+    background-color: #008cba;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #005f5f;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    padding: 60px 0;
+  }
+  
+  .faq-item {
+    margin-bottom: 40px;
+  }
+  
+  .faq-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .faq-item p {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+  }
+  
+  .footer-column h3 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-column p,
+  .footer-column a {
+    color: #fff;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    /* Hide navigation menu and show menu icon */
+    nav ul {
+      display: none;
+    }
+    
+    .menu-icon {
+      display: block;
+    }
+    
+    /* Display nav menu when toggled */
+    nav.active ul {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+    }
+    
+    nav.active ul li {
+      margin: 15px 0;
+    }
+    
+    /* Stack columns vertically */
+    .service-items,
+    .team-grid,
+    .contact-info,
+    .footer-columns {
+      flex-direction: column;
+    }
+    
+    .service-item,
+    .team-member,
+    .contact-item,
+    .footer-column {
+      margin: 0 auto 20px;
+    }
+  }
