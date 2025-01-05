@@ -244,26 +244,7 @@ body {
     justify-content: space-between;
   }
   
-  .team-member {
-    flex: 1;
-    min-width: 200px;
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .team-member img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-  }
-  
-  .team-member h3 {
-    margin-top: 15px;
-  }
-  
-  .team-member p {
-    margin-top: 5px;
-  }
+ 
   
   /* Products Section */
   .products-section {
