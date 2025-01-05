@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #333;
+  color: #141313;
   line-height: 1.6;
   margin: 0;
 }
@@ -76,7 +76,7 @@ nav ul li a.active {
 /* Hero Section */
 .hero {
   background: url('img/Non-woven.png') center/cover no-repeat;
-  color: #b9d8b8;
+  color: #ce2c7d;
   text-align: center;
   padding: 100px 0;
 }
