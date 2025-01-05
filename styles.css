@@ -410,45 +410,34 @@ body {
     text-align: center;
     margin-top: 20px;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    /* Hide navigation menu and show menu icon */
-    nav ul {
-      display: none;
-    }
-    
-    .menu-icon {
-      display: block;
-    }
-    
-    /* Display nav menu when toggled */
-    nav.active ul {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 200px;
-    }
-    
-    nav.active ul li {
-      margin: 15px 0;
-    }
-    
-    /* Stack columns vertically */
-    .service-items,
-    .team-grid,
-    .contact-info,
-    .footer-columns {
-      flex-direction: column;
-    }
-    
-    .service-item,
-    .team-member,
-    .contact-item,
-    .footer-column {
-      margin: 0 auto 20px;
-    }
+  /* Mobile Styles */
+@media (max-width: 768px) {
+  /* Header */
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fff;
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  nav ul li {
+    margin-left: 0;
+  }
+
+  nav ul li a {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  nav ul li:last-child a {
+    border-bottom: none;
   }
