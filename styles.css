@@ -149,20 +149,95 @@ body {
     font-size: 36px;
   }
   
-  /* About Section */
-  .about-section {
+  .company-overview {
     padding: 60px 0;
   }
   
-  .about-section h2 {
+  .content-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .text-content {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .image-content {
+    flex: 1;
+  }
+  
+  .image-content img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .company-overview h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  /* Mission and Vision */
+  .mission-vision {
+    background: #f9f9f9;
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .mission,
+  .vision {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .mission i,
+  .vision i {
+    font-size: 40px;
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+  
+  .mission h2,
+  .vision h2 {
     font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  /* Core Values */
+  .core-values {
+    padding: 60px 0;
+  }
+  
+  .core-values h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .values-grid {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .value-item {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .value-item i {
+    font-size: 40px;
+    color: #007BFF;
     margin-bottom: 20px;
   }
   
-  .about-section p {
-    margin-bottom: 20px;
+  .value-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
   }
-  
   .team-grid {
     display: flex;
     flex-wrap: wrap;
