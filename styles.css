@@ -60,10 +60,13 @@ body {
   /* Menu Icon for Mobile */
   .menu-icon {
     display: none;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
   }
   
+  .menu-icon i {
+    color: #333;
+  }
   /* Hero Section */
   .hero {
     background: url('img/Non-woven.png') center/cover no-repeat;
