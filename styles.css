@@ -65,7 +65,7 @@ body {
   }
   
   .menu-icon i {
-    color: #333;
+    color: #e0d5d5;
   }
   /* Hero Section */
   .hero {
@@ -441,3 +441,55 @@ body {
   nav ul li:last-child a {
     border-bottom: none;
   }
+  /* Services Section */
+  .service-item {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .call-to-action h2 {
+    font-size: 28px;
+  }
+
+  .call-to-action p {
+    font-size: 18px;
+  }
+}
+
+/* Show Nav Menu when Toggle */
+nav ul.show {
+  display: flex;
+}
+
+/* Active Link Styling */
+nav ul li a.active {
+  background-color: #007BFF;
+  color: #fff;
+}
+
+/* Hover Effects */
+nav ul li a:hover {
+  background-color: #007BFF;
+  color: #fff;
+}
