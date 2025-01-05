@@ -449,15 +449,10 @@ footer {
       z-index: 999; /* Ensure it appears above other elements */
   }
 
-  nav ul li {
-      margin-left: 0;
+
   }
 
-  nav ul li a {
-      padding: 12px;
-  
-      color: #333; /* Adjust color for better contrast on mobile menu */
-  }
+ 
   nav ul.active {
     display: flex;
 }
@@ -478,7 +473,7 @@ nav ul li a {
 nav ul li:last-child a {
     border-bottom: none;
 }
-}
+
 
   nav ul li a:hover,
   nav ul li a.active {
