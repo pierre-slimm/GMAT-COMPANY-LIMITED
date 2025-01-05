@@ -432,16 +432,18 @@ footer {
   .menu-icon {
       display: block;
   }
-
+  .menu-icon.active i::before {
+    content: "\f00d"; /* Unicode for Font Awesome's close icon */
+}
   nav ul {
       display: none;
       position: absolute;
       right: 0;
       top: 60px;
-      background-color: #fff;
+      background-color: #34217a;
       flex-direction: column;
       width: 200px;
-      border: 1px solid #ddd;
+      border: 1px solid #201847;
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       z-index: 999; /* Ensure it appears above other elements */
@@ -453,9 +455,30 @@ footer {
 
   nav ul li a {
       padding: 12px;
-      border-bottom: 1px solid #eee;
+  
       color: #333; /* Adjust color for better contrast on mobile menu */
   }
+  nav ul.active {
+    display: flex;
+}
+
+/* Navigation Items in Mobile */
+nav ul li {
+    margin: 0;
+  
+}
+
+/* Navigation Links in Mobile */
+nav ul li a {
+    padding: 12px 16px;
+    color: #fff;
+}
+
+/* Remove Bottom Border from Last Item */
+nav ul li:last-child a {
+    border-bottom: none;
+}
+}
 
   nav ul li a:hover,
   nav ul li a.active {
