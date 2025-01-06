@@ -348,36 +348,80 @@ nav ul li a.active::after {
 }
 
 /* why choose us */
+/* Container for the Services Section */
 .services {
-  padding: 60px 0;
+  padding: 60px 20px; /* Added horizontal padding for better spacing on smaller screens */
+  background-color: #f9f9f9; /* Optional: Background color for the services section */
 }
 
+/* Flex Container for Service Items */
 .service-items {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allows items to wrap into multiple rows */
+  justify-content: space-between; /* Distributes space evenly between items */
+  gap: 40px; /* Adds consistent spacing between items */
 }
 
+/* Individual Service Item */
 .service-item {
-  flex: 1;
-  min-width: 250px;
-  margin: 20px;
+  flex: 1 1 calc(33.333% - 40px); /* Three items per row with spacing accounted for */
+  min-width: 250px; /* Ensures items don't shrink below 250px */
+  max-width: 300px; /* Optional: Limits the maximum width for better aesthetics */
+  margin: 20px 0; /* Vertical margin to maintain spacing in wrapped rows */
   text-align: center;
+  background-color: #fff; /* Optional: Background color for individual service items */
+  padding: 20px;
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Optional: Adds hover effects */
 }
 
+/* Hover Effects for Service Items */
+.service-item:hover {
+  transform: translateY(-5px); /* Slight upward movement */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Service Item Image */
 .service-item img {
   width: 80px;
   height: 80px;
+  object-fit: contain; /* Ensures the image scales correctly */
+  margin-bottom: 15px; /* Spacing between image and heading */
 }
 
+/* Service Item Heading */
 .service-item h3 {
-  margin-top: 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
+/* Service Item Description */
 .service-item p {
-  margin-top: 10px;
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
+/* Responsive Adjustments */
+
+/* Tablets and Small Desktops */
+@media (max-width: 992px) {
+  .service-item {
+    flex: 1 1 calc(45% - 40px); /* Two items per row */
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+  .service-item {
+    flex: 1 1 100%; /* One item per row */
+    max-width: 100%;
+  }
+}
 /* Call to Action Section */
 .call-to-action {
   background-color: #008cba;
@@ -822,16 +866,17 @@ nav ul li a.active::after {
 }
 
 footer {
-  background-color: #0d7212;
-  color:#231380;
-  padding: var(--footer-padding);
+  background-color: #0d7212; /* Keep the same background color */
+  color: #231380; /* Keep the same text color */
+  padding: 0; /* Reduce the padding size to make it smaller */
   font-family: var(--font-family);
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1200px; /* Keep the width the same */
   margin: 0 auto;
 }
+
 
 .footer-columns {
   display: flex;
