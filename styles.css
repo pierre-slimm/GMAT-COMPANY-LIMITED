@@ -33,29 +33,115 @@ header .container {
   height: 80px;
 }
 
+/* Navigation Container */
 nav {
   position: relative;
+  font-family: 'Poppins', sans-serif; /* Ensures consistent typography */
 }
 
+/* Navigation Menu */
 nav ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center; /* Vertically centers the nav items */
 }
 
+/* Navigation Items */
 nav ul li {
   margin-left: 30px;
+  position: relative;
 }
 
+/* Navigation Links */
 nav ul li a {
-  padding: 8px 12px;
+  display: inline-block;
+  padding: 10px 15px;
   border-radius: 4px;
-  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff; /* White text for better contrast */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
   background-color: transparent;
-  color: #c0b9b9; 
 }
 
+/* Hover Effect */
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: #ffffff; /* White background on hover */
+  color: #da1c1c; /* Brand color for text on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Active/Current Page Link */
+nav ul li a.active {
+  background-color: #da1c1c; /* Brand color background */
+  color: #ffffff; /* White text */
+}
+
+/* Underline Indicator for Active Link */
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #da1c1c; /* Brand color for underline */
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%; /* Expands underline on hover or if active */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #333; /* Dark background for mobile menu */
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 0;
+    width: 200px;
+    display: none; /* Hidden by default */
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  nav ul.active {
+    display: flex; /* Displays menu when active */
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  /* Hamburger Menu Icon */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    color: #ffffff; /* White icon */
+    font-size: 24px;
+  }
+
+  /* Hide menu items on mobile initially */
+  nav ul li a {
+    color: #ffffff;
+  }
+
+  /* Hover effect adjustments for mobile */
+  nav ul li a:hover,
+  nav ul li a:focus {
+    background-color: #444; /* Slightly lighter than mobile menu background */
+    color: #da1c1c;
+  }
+}
 
 
 /* Menu Icon for Mobile */
