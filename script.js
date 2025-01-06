@@ -36,3 +36,40 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 });
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('h2');
+
+    // Click Event
+    question.addEventListener('click', () => {
+      // Toggle the active class
+      item.classList.toggle('active');
+
+      // Optionally, close other open FAQ items
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+    });
+
+    // Keyboard Accessibility (Enter and Space keys)
+    question.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        item.classList.toggle('active');
+
+        // Optionally, close other open FAQ items
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+          }
+        });
+      }
+    });
+  });
+});

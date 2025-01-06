@@ -104,7 +104,7 @@ nav ul li a {
   background-color: #005f5f;
 }
 
-/* About Section */
+/* why choose us */
 .services {
   padding: 60px 0;
 }
@@ -361,21 +361,109 @@ nav ul li a {
 }
 
 /* FAQ Section */
+/* FAQ Section */
 .faq-section {
-  padding: 60px 0;
+  padding: 80px 20px;
+  background-color: #f4f4f9; /* Light background for contrast */
+  font-family: 'Poppins', sans-serif; /* Consistent with your imported font */
 }
 
+/* Container to center content and limit width */
+.faq-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.page-banner {
+  background-color: #da1c1c; /* Matching the color scheme */
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.page-banner h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+/* Individual FAQ Item */
 .faq-item {
-  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effect for FAQ Items */
+.faq-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* FAQ Question */
 .faq-item h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin: 0;
+  padding: 20px 30px;
+  background-color: #da1c1c;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
 
+/* Plus Icon for Accordion */
+.faq-item h2::after {
+  content: '\f067'; /* Font Awesome plus icon */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+/* Rotate Icon When Active */
+.faq-item.active h2::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* FAQ Answer */
 .faq-item p {
-  margin-bottom: 10px;
+  padding: 0 30px 20px 30px;
+  margin: 0;
+  color: #555;
+  display: none; /* Hidden by default */
+  line-height: 1.6;
+}
+
+/* Show Answer When Active */
+.faq-item.active p {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 10px;
+  }
+
+  .page-banner h1 {
+    font-size: 28px;
+  }
+
+  .faq-item h2 {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  .faq-item p {
+    padding: 0 20px 15px 20px;
+  }
 }
 
 /* Footer */
