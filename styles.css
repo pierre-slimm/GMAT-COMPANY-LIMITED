@@ -15,11 +15,15 @@ body {
 
 /* Header */
 header {
-  background-color: #14084b;
-  border-bottom: 1px solid #ddd;
+  background:  #06074b; /* Modern gradient background */
+  box-shadow:  #1276c7; /* Subtle shadow for depth */
   position: sticky;
   top: 0;
+  width: 100%;
+  height: var(--header-height);
   z-index: 1000;
+  transition: background var(--transition-speed) ease, box-shadow var(--transition-speed) ease; /* Smooth transitions */
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
 }
 
 header .container {
