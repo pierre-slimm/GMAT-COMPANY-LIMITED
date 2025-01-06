@@ -30,11 +30,15 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: var(--padding-desktop); /* Increased padding for better spacing */
+  max-width: var(--max-width); /* Limits the width for larger screens */
+  margin: 0 auto; /* Centers the container */
+  height: 100%
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
+  transition: height var(--transition-speed) ease;
 }
 
 /* Navigation Container */
