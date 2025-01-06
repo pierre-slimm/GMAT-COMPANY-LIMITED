@@ -376,7 +376,7 @@ nav ul li a {
 
 /* Section Title */
 .page-banner {
-  background-color: #da1c1c; /* Matching the color scheme */
+  background-color: #231380; /* Matching the color scheme */
   color: #fff;
   padding: 40px 20px;
   text-align: center;
@@ -408,7 +408,7 @@ nav ul li a {
   font-size: 20px;
   margin: 0;
   padding: 20px 30px;
-  background-color: #da1c1c;
+  background-color: #1f1974;
   color: #fff;
   cursor: pointer;
   position: relative;
