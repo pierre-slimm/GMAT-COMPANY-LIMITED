@@ -386,8 +386,9 @@ nav ul li a.active::after {
 .service-item img {
   width: 80px;
   height: 80px;
-  object-fit: contain; /* Ensures the image scales correctly */
-  margin-bottom: 15px; /* Spacing between image and heading */
+  object-fit: contain; 
+  margin-bottom: 15px;
+  border-radius: 8px; 
 }
 
 /* Service Item Heading */
