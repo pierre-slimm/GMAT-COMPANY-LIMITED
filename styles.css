@@ -348,13 +348,13 @@ nav ul li a.active::after {
 }
 
 /* why choose us */
-/* Container for the Services Section */
+
 .services {
-  padding: 60px 20px; /* Added horizontal padding for better spacing on smaller screens */
-  background-color: #f9f9f9; /* Optional: Background color for the services section */
+  padding: 60px 20px; 
+  background-color: #f9f9f9; 
 }
 
-/* Flex Container for Service Items */
+
 .service-items {
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap into multiple rows */
@@ -406,7 +406,23 @@ nav ul li a.active::after {
   font-size: 1rem;
   line-height: 1.5;
 }
+p {
+  font-size: 16px;
+  color: gray;
+  font-family: chalet-london-sixty, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
 /* Responsive Adjustments */
 
 /* Tablets and Small Desktops */
