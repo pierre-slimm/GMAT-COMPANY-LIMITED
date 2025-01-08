@@ -357,23 +357,23 @@ nav ul li a.active::after {
 
 .service-items {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap into multiple rows */
-  justify-content: space-between; /* Distributes space evenly between items */
-  gap: 40px; /* Adds consistent spacing between items */
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  gap: 40px; 
 }
 
 /* Individual Service Item */
 .service-item {
-  flex: 1 1 calc(33.333% - 40px); /* Three items per row with spacing accounted for */
-  min-width: 250px; /* Ensures items don't shrink below 250px */
-  max-width: 300px; /* Optional: Limits the maximum width for better aesthetics */
-  margin: 20px 0; /* Vertical margin to maintain spacing in wrapped rows */
+  flex: 1 1 calc(33.333% - 40px); 
+  min-width: 250px; 
+  max-width: 300px; 
+  margin: 20px 0; 
   text-align: center;
-  background-color: #fff; /* Optional: Background color for individual service items */
+  background-color: #fff; 
   padding: 20px;
-  border-radius: 8px; /* Optional: Rounded corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for depth */
-  transition: transform 0.3s, box-shadow 0.3s; /* Optional: Adds hover effects */
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 /* Hover Effects for Service Items */
