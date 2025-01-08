@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Set the recipient email address
-  $recipient = "info@gmatcompany.co.ke";
+  $recipient = "mainapeter008@gmail.com";
 
   // Set the email subject
   $subject = "New Contact from $name";
