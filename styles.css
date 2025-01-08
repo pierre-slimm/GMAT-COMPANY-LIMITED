@@ -548,6 +548,44 @@ nav ul li a.active::after {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.slider {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.active {
+  opacity: 1;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+}
+
+h2 {
+  margin: 0 0 10px 0;
+}
+
+p {
+  margin: 0;
+  font-size: 1.2rem;
+}
 
 /* Products Section */
 .products-section {
@@ -869,7 +907,7 @@ nav ul li a.active::after {
 footer {
   background-color: #0d7212; /* Keep the same background color */
   color: #231380; /* Keep the same text color */
-  padding: 0; /* Reduce the padding size to make it smaller */
+  padding: 10px; 
   font-family: var(--font-family);
 }
 
