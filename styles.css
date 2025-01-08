@@ -720,7 +720,30 @@ p {
     font-size: 0.95rem;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .products-section {
+    background-color: #1a1a1a;
+  }
 
+  .product-card {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+
+  .product-description,
+  .product-features li {
+    color: #cccccc;
+  }
+
+  .btn-primary {
+    background-color: #4caf50;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #388e3c;
+  }
+}
 .contact-section {
   padding: 80px 20px;
   background-color: #f9f9f9; /* Subtle background for distinction */
