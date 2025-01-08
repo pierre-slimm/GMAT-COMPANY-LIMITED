@@ -408,7 +408,7 @@ nav ul li a.active::after {
 }
 p {
   font-size: 16px;
-  color: gray;
+  color: rgb(20, 16, 16);
   font-family: chalet-london-sixty, sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -1045,7 +1045,7 @@ p {
 
 /* Footer Styling */
 footer {
-  background-color: #0d7212; 
+  background-color: #6c737c; 
   color: #ffffff; 
   padding: 20px 10px; 
   font-family: 'Poppins', sans-serif; 
