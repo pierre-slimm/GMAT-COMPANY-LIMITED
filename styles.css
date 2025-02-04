@@ -354,6 +354,7 @@ nav ul li a.active::after {
   background-color: #f9f9f9; 
 }
 
+  
 
 .service-items {
   display: flex;
@@ -361,6 +362,7 @@ nav ul li a.active::after {
   justify-content: space-between; 
   gap: 40px; 
 }
+
 
 /* Individual Service Item */
 .service-item {
@@ -405,6 +407,7 @@ nav ul li a.active::after {
   color: #666;
   font-size: 1rem;
   line-height: 1.5;
+  text-align: center;
 }
 p {
   font-size: 16px;
@@ -412,8 +415,12 @@ p {
   font-family: chalet-london-sixty, sans-serif;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
-
+h2{
+  text-align: center;
+  color: rgb(20, 16, 16);
+}
 
 p {
   display: block;
