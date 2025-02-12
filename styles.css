@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  color: #e0d4d4;
+  color: #0a0a0a;
   line-height: 1.6;
   margin: 0;
 }
@@ -349,10 +349,23 @@ nav ul li a.active::after {
 }
 
 /* why choose us */
+h1 {
+  margin: 0 0 10px 0;
+  color: #161514;
+ text-align: center;
+}
+
+p1 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: rgb(8, 8, 8);
+  text-align: center;
+}
 
 .services {
   padding: 60px 20px; 
   background-color: #f9f9f9; 
+  
 }
 
   
@@ -611,7 +624,7 @@ h2 {
 p {
   margin: 0;
   font-size: 1.2rem;
-  color: white;
+  color: rgb(233, 234, 241);
 }
 
 /* ---------------------------------------------------
