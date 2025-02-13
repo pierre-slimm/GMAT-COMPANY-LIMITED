@@ -130,14 +130,7 @@ nav ul li a.active::after {
     text-align: center;
   }
 
-  /* Hamburger Menu Icon */
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-    color: #ffffff; 
-    font-size: 24px;
-  }
-
+  
   
   nav ul li a {
     color: #ffffff;
@@ -154,17 +147,37 @@ nav ul li a.active::after {
 
 /* Menu Icon for Mobile */
 .menu-icon {
-  display: none;
+  display: none; /* Hidden by default */
   font-size: 24px;
   cursor: pointer;
+  color: #ffffff; /* Ensure the icon is visible */
 }
 
 .menu-icon i {
-  color: #e0d5d5;
+  color: #e0d5d5; /* Icon color */
 }
 
 
+/* Close Icon for Mobile */
+.close-icon {
+  display: none; /* Hidden by default */
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff; /* Ensure the icon is visible */
+}
 
+.close-icon i {
+  color: #e0d5d5; /* Icon color */
+}
+
+/* Show close icon and hide menu icon when menu is open */
+.nav-menu-open .close-icon {
+  display: block;
+}
+
+.nav-menu-open .menu-icon {
+  display: none;
+}
 /* Hero Section */
 
 :root {
