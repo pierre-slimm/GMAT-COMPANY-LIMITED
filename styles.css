@@ -139,7 +139,7 @@ nav ul li a.active::after {
   
   nav ul li a:hover,
   nav ul li a:focus {
-    background-color: #444; 
+    background-color: #444444; 
     color: #da1c1c;
   }
 }
