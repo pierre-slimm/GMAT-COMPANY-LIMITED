@@ -170,13 +170,12 @@ nav ul li a.active::after {
   color: #e0d5d5; /* Icon color */
 }
 
-/* Show close icon and hide menu icon when menu is open */
-.nav-menu-open .close-icon {
-  display: block;
-}
-
 .nav-menu-open .menu-icon {
   display: none;
+}
+
+.nav-menu-open .close-icon {
+  display: block;
 }
 /* Hero Section */
 

@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
     navMenu.classList.toggle('show');
   }
 
-  if (menuIcon && navMenu) {
+  if (menuIcon && closeIcon && navMenu) {
     menuIcon.addEventListener('click', toggleMenu);
+    closeIcon.addEventListener('click', toggleMenu);
   }
 
   if (closeIcon) {
