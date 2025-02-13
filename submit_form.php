@@ -1,36 +1,54 @@
-<?php
+<?php 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+// Corrected relative paths (ensure PHPMailer is properly placed in your project)
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Sanitize and validate input
-  $name = strip_tags(trim($_POST["name"]));
-  $email = filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL);
-  $message = trim($_POST["message"]);
+    $name = strip_tags(trim($_POST["name"]));
+    $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+    $subject = strip_tags(trim($_POST["subject"]));
+    $message = strip_tags(trim($_POST["message"]));
 
-  if (empty($name) || empty($email) || empty($message) || !$email) {
-    echo "Please complete the form correctly.";
-    exit;
-  }
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        die("All fields are required.");
+    }
 
-  // Set the recipient email address
-  $recipient = "mainapeter008@gmail.com";
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Invalid email format.");
+    }
 
-  // Set the email subject
-  $subject = "New Contact from $name";
+    $mail = new PHPMailer(true); // Enable exceptions
 
-  // Build the email content
-  $email_content = "Name: $name\n";
-  $email_content .= "Email: $email\n\n";
-  $email_content .= "Message:\n$message\n";
+    try {
+        // SMTP Server Settings
+        $mail->SMTPDebug = SMTP::DEBUG_OFF; // Set to DEBUG_SERVER for troubleshooting
+        $mail->isSMTP();
+        $mail->Host       = 'mail.yourdomain.com'; // Replace with your actual SMTP host
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'info@gmatcompanylimited.co.ke';
+        $mail->Password   = 'your_email_password'; // Replace with an environment variable for security
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port       = 587; // Use 465 for SSL if required
 
-  // Build the email headers
-  $email_headers = "From: $name <$email>";
+        // Sender & Recipient
+        $mail->setFrom('info@gmatcompanylimited.co.ke', 'GMAT Company Contact Form');
+        $mail->addAddress('slimmworldtechnologies21@gmail.com', 'Recipient Name');
 
-  // Send the email
-  if (mail($recipient, $subject, $email_content, $email_headers)) {
-    echo "Thank you for your message!";
-  } else {
-    echo "Oops! Something went wrong; please try again.";
-  }
-} else {
-  echo "There was a problem with your submission.";
+        // Email Content
+        $mail->isHTML(false);
+        $mail->Subject = "Website Contact Form: $subject";
+        $mail->Body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+
+        // Send Email
+        $mail->send();
+        echo 'Message has been sent successfully!';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Error: {$mail->ErrorInfo}";
+    }
 }
 ?>
