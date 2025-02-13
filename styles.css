@@ -166,7 +166,7 @@ nav ul li a.active::after {
 
 
 /* Hero Section */
-/* CSS Variables for Easy Customization */
+
 :root {
   /* Colors */
   --primary-color: #e2e612;
@@ -461,18 +461,18 @@ p {
   }
 }
 /* Call to Action Section */
-.call-to-action {
+.cta-section {
   background-color: #008cba;
   color: #fff;
   text-align: center;
   padding: 50px 0;
 }
 
-.call-to-action h2 {
+.cta-section h2 {
   font-size: 36px;
 }
 
-.call-to-action p {
+.cta-section p {
   font-size: 20px;
   margin: 20px 0;
 }
@@ -581,12 +581,8 @@ p {
   margin-bottom: 10px;
 }
 
-/* Team Grid */
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+/* Sliders grid*/
+
 .slider {
   width: 100%;
   height: 90vh;
@@ -812,7 +808,7 @@ p {
   margin: 0;
 }
 
-/* Contact Information */
+
 /* Contact Section Styling */
 .contact-section {
   background: linear-gradient(to right, #2c3e50, #34495e);
@@ -945,7 +941,7 @@ p {
 }
 
 
-/* FAQ Section */
+
 /* FAQ Section */
 .faq-section {
   padding: 80px 20px;
