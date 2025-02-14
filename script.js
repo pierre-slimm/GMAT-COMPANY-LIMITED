@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Toggle Mobile Menu
+  // Selectors
   const menuIcon = document.querySelector('.menu-icon');
   const closeIcon = document.querySelector('.close-icon');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('#nav-menu li a');
+  const dropdownToggle = document.querySelector('.menu-item-has-children > .menu-link');
   const currentYearElement = document.getElementById("current-year");
 
   // Update current year
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle mobile menu visibility
   function toggleMenu() {
-    document.body.classList.toggle('nav-menu-open'); // Apply class to body
+    document.body.classList.toggle('nav-menu-open');
     navMenu.classList.toggle('show');
   }
 
@@ -22,21 +23,27 @@ document.addEventListener('DOMContentLoaded', function () {
     closeIcon.addEventListener('click', toggleMenu);
   }
 
-  if (closeIcon) {
-    closeIcon.addEventListener('click', toggleMenu);
-  }
-
-  // Close menu when clicking a nav link
+  // Close menu when clicking a nav link (except dropdown parent)
   if (navLinks.length > 0) {
     navLinks.forEach(link => {
-      link.addEventListener('click', function () {
-        navLinks.forEach(lnk => lnk.classList.remove('active')); // Remove active class
-        this.classList.add('active'); // Add active class to clicked link
-
-        // Close menu after selection
-        document.body.classList.remove('nav-menu-open');
-        navMenu.classList.remove('show');
+      link.addEventListener('click', function (event) {
+        if (!this.parentElement.classList.contains('menu-item-has-children')) {
+          document.body.classList.remove('nav-menu-open');
+          navMenu.classList.remove('show');
+        }
       });
+    });
+  }
+
+  // Submenu Toggle for Mobile & Desktop
+  if (dropdownToggle) {
+    dropdownToggle.addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent default navigation
+      this.parentElement.classList.toggle('active'); // Toggle active class
+      const subMenu = this.nextElementSibling;
+      if (subMenu) {
+        subMenu.classList.toggle('show');
+      }
     });
   }
 

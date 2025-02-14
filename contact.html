@@ -22,16 +22,32 @@
         </a>
       </div>
       <nav>
+        <!-- Mobile Menu Icon -->
         <span class="menu-icon" id="menu-icon"><i class="fas fa-bars"></i></span>
+    
+        <!-- Navigation Menu -->
         <ul id="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="faq.html">FAQs</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html">Home</a></li>
+    
+            <!-- Dropdown Menu -->
+            <li class="menu-item menu-item-has-children">
+                <a href="#" class="menu-link has-submenu" id="products-menu">
+                    Our Products <span class="sub-arrow"><i class="fas fa-caret-down"></i></span>
+                </a>
+                <ul class="sub-menu">
+                    <li><a href="packaging.html">Packaging</a></li>
+                    <li><a href="Branding&Printing.html">Branding & Printing.</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
+    
+        <!-- Close Icon for Mobile -->
         <span class="close-icon" id="close-icon"><i class="fas fa-times"></i></span>
-      </nav>
+    </nav>
     </div>
   </header>
   <!-- Hero Section -->
