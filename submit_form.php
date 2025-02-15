@@ -26,12 +26,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         // SMTP Server Settings
-        $mail->SMTPDebug = SMTP::DEBUG_OFF; // Set to DEBUG_SERVER for troubleshooting
+       // $mail->SMTPDebug = SMTP::DEBUG_OFF; // Set to DEBUG_SERVER for troubleshooting
         $mail->isSMTP();
         $mail->Host       = 'das108.truehost.cloud'; // Replace with your actual SMTP host
         $mail->SMTPAuth   = true;
         $mail->Username   = 'info@gmatcompanylimited.co.ke';
-        $mail->Password   = '@SlimmWorld25'; // Replace with an environment variable for security
+        $mail->Password   = ''; // Replace with an environment variable for security
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587; // Use 465 for SSL if required
 
