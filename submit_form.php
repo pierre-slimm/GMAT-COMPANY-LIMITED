@@ -28,15 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // SMTP Server Settings
         $mail->SMTPDebug = SMTP::DEBUG_OFF; // Set to DEBUG_SERVER for troubleshooting
         $mail->isSMTP();
-        $mail->Host       = 'mail.yourdomain.com'; // Replace with your actual SMTP host
+        $mail->Host       = 'das108.truehost.cloud'; // Replace with your actual SMTP host
         $mail->SMTPAuth   = true;
         $mail->Username   = 'info@gmatcompanylimited.co.ke';
-        $mail->Password   = 'your_email_password'; // Replace with an environment variable for security
+        $mail->Password   = '@SlimmWorld25'; // Replace with an environment variable for security
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port       = 587; // Use 465 for SSL if required
 
         // Sender & Recipient
-        $mail->setFrom('info@gmatcompanylimited.co.ke', 'GMAT Company Contact Form');
+        $mail->setFrom('info@gmatcompanylimited.co.ke', 'Website Contact Form');
         $mail->addAddress('slimmworldtechnologies21@gmail.com', 'Recipient Name');
 
         // Email Content
