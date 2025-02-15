@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // SMTP Server Settings
        // $mail->SMTPDebug = SMTP::DEBUG_OFF; // Set to DEBUG_SERVER for troubleshooting
         $mail->isSMTP();
-        $mail->Host       = 'das108.truehost.cloud'; // Replace with your actual SMTP host
+        $mail->Host       = 'mail.gmatcompanylimited.co.ke'; // Replace with your actual SMTP host
         $mail->SMTPAuth   = true;
         $mail->Username   = 'info@gmatcompanylimited.co.ke';
         $mail->Password   = ''; // Replace with an environment variable for security
