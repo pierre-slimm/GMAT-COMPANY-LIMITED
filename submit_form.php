@@ -39,18 +39,24 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $mail = new PHPMailer(true);
 
 try {
+    // Enable Debugging for Development (Disable in Production)
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
     // SMTP Server Settings
     $mail->isSMTP();
     $mail->Host       = 'mail.gmatcompanylimited.co.ke';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'info@gmatcompanylimited.co.ke';
-    $mail->Password   = ''; 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->Password   = 'your-email-password'; // Use the actual SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Try ENCRYPTION_SMTPS if needed
+    $mail->Port       = 587; // Change to 465 if using SSL
 
     // Sender & Recipient
-    $mail->setFrom('slimmworldtechnlogies21@gmail.com', 'Website Contact Form');
+    $mail->setFrom('info@gmatcompanylimited.co.ke', 'Website Contact Form');
     $mail->addAddress('info@gmatcompanylimited.co.ke', 'Recipient Name');
+
+    // Reply-To (Allows responding to sender)
+    $mail->addReplyTo($email, $name);
 
     // Email Content
     $mail->isHTML(false);
@@ -62,5 +68,5 @@ try {
     sendResponse(true, "Thank you! Your message has been sent successfully.");
     
 } catch (Exception $e) {
-    sendResponse(false, "Message could not be sent. Please try again later.");
+    sendResponse(false, "Message could not be sent. Error: " . $mail->ErrorInfo);
 }
