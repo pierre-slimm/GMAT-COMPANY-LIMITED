@@ -99,3 +99,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
   startSlideshow();
 });
+
+$(document).ready(function() {
+  $('#contactForm').on('submit', function(e) {
+      e.preventDefault();
+      
+      const $form = $(this);
+      const $submitButton = $form.find('button[type="submit"]');
+      const $messageDiv = $form.find('.form-message');
+      
+      // Disable submit button while processing
+      $submitButton.prop('disabled', true);
+      $messageDiv.html('<p>Sending message...</p>');
+      
+      $.ajax({
+          type: 'POST',
+          url: 'submit_form.php',
+          data: $form.serialize(),
+          dataType: 'json',
+          success: function(response) {
+              if (response.success) {
+                  $messageDiv.html('<p class="success">' + response.message + '</p>');
+                  $form[0].reset(); // Clear the form
+              } else {
+                  $messageDiv.html('<p class="error">' + response.message + '</p>');
+              }
+          },
+          error: function() {
+              $messageDiv.html('<p class="error">An error occurred. Please try again later.</p>');
+          },
+          complete: function() {
+              $submitButton.prop('disabled', false);
+          }
+      });
+  });
+})
