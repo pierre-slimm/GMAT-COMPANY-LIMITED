@@ -100,37 +100,47 @@ document.addEventListener('DOMContentLoaded', function () {
   startSlideshow();
 });
 
-$(document).ready(function() {
-  $('#contactForm').on('submit', function(e) {
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const messageDiv = form.querySelector('.form-message');
+
+  form.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      const $form = $(this);
-      const $submitButton = $form.find('button[type="submit"]');
-      const $messageDiv = $form.find('.form-message');
-      
       // Disable submit button while processing
-      $submitButton.prop('disabled', true);
-      $messageDiv.html('<p>Sending message...</p>');
+      submitButton.disabled = true;
+      messageDiv.innerHTML = '<p>Sending message...</p>';
       
-      $.ajax({
-          type: 'POST',
-          url: 'submit_form.php',
-          data: $form.serialize(),
-          dataType: 'json',
-          success: function(response) {
-              if (response.success) {
-                  $messageDiv.html('<p class="success">' + response.message + '</p>');
-                  $form[0].reset(); // Clear the form
-              } else {
-                  $messageDiv.html('<p class="error">' + response.message + '</p>');
-              }
+      // Create FormData object
+      const formData = new FormData(form);
+      
+      // Convert FormData to URL-encoded string
+      const data = new URLSearchParams(formData).toString();
+      
+      // Make the AJAX request
+      fetch('submit_form.php', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
           },
-          error: function() {
-              $messageDiv.html('<p class="error">An error occurred. Please try again later.</p>');
-          },
-          complete: function() {
-              $submitButton.prop('disabled', false);
+          body: data
+      })
+      .then(response => response.json())
+      .then(data => {
+          if (data.success) {
+              messageDiv.innerHTML = '<p class="success">' + data.message + '</p>';
+              form.reset(); // Clear the form
+          } else {
+              messageDiv.innerHTML = '<p class="error">' + data.message + '</p>';
           }
+      })
+      .catch(error => {
+          messageDiv.innerHTML = '<p class="error">An error occurred. Please try again later.</p>';
+          console.error('Error:', error);
+      })
+      .finally(() => {
+          submitButton.disabled = false;
       });
   });
-})
+});
