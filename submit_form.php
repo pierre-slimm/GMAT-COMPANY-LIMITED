@@ -47,7 +47,7 @@ try {
     $mail->Host       = 'mail.gmatcompanylimited.co.ke';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'info@gmatcompanylimited.co.ke';
-    $mail->Password   = 'your-email-password'; // Use the actual SMTP password
+    $mail->Password   = '@Slimm20025'; // Use the actual SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Try ENCRYPTION_SMTPS if needed
     $mail->Port       = 587; // Change to 465 if using SSL
 
